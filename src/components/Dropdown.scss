@@ -1,0 +1,106 @@
+.search-dropdown {
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  top: 100%;
+  padding: 0px;
+  //   border: 1px solid gray;
+  box-shadow: 2px 0 6px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: 0;
+
+  .dropdown-item {
+    list-style: none;
+    height: 60px;
+    border-bottom: 1px solid rgb(189, 187, 187);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    // padding: 5px;
+    transition: 0.3s;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: #e7f4fe;
+    }
+
+    .location-type {
+      display: flex;
+      width: 100px;
+      padding: 10px;
+      background-color: #0a6fba;
+      color: white;
+      font-size: 20px;
+      font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+      border-radius: 5px;
+      text-align: center;
+      height: 15px;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      font-weight: 500;
+
+      &.green {
+        background-color: #67bf4e;
+      }
+
+      &.red {
+        background-color: #f02222d4;
+      }
+
+      @media (max-width: 550px) {
+        font-size: 16px;
+        width: 60px;
+      }
+    }
+
+    .location-details {
+      display: flex;
+      flex-direction: column;
+      font-size: 10px;
+      margin: 0 0 0 30px;
+      width: 80%;
+      align-self: flex-start;
+      text-align: left;
+      justify-content: space-evenly;
+      height: inherit;
+
+      @media (max-width: 550px) {
+        margin: 0 0 0 10px;
+      }
+
+      .location-name,
+      .location-place {
+        font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        font-weight: 400;
+
+        @media (max-width: 550px) {
+          font-size: 12px;
+        }
+      }
+
+      .location-name {
+        font-size: 18px;
+
+        @media (max-width: 550px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .location-no-results {
+    text-align: center;
+    font-weight: 500;
+    font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+    font-size: 20px;
+    width: 100%;
+  }
+}
